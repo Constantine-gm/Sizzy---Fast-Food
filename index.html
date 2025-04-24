@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sizzy - Burger & Takeaway</title>
+    <!-- Importa il font Potta One da Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6bfa7fc6c3.js" crossorigin="anonymous"></script>
+    <style>
+        /* RESET STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        /* STYLES FOR NAVIGATION (Login/Register) */
+        .nav-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #242323;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            height:45px;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            margin-left: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #ff6f61;
+        }
+
+        .nav-bar .login {
+            font-weight: bold;
+        }
+
+        /* HEADER STYLES */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://tinyurl.com/pinupbann');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-color: #242323;
+            padding: 80px 20px;
+            position: relative;
+            height: 50vh;
+            margin-top: 45px; /* To prevent overlap with fixed navbar */
+        }
+
+        /* Sovrapposizione del background */
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        /* Contenitore del testo (centrato) */
+        .header-text {
+            z-index: 2;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            margin-left: 50px;
+            margin-bottom:50px;
+        }
+
+        header h1 {
+            font-family: 'Potta One', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: now;
+        }
+
+        .header-image {
+            left: 0px;
+            bottom: 20px;
+            z-index: 2;
+        }
+
+        .header-image img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            position:absolute;
+            top:35px;
+        }
+
+        /* TAKEAWAY BANNER STYLES */
+        .takeaway-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            background-color: #ffb84d; /* Warm orange */
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+
+        .takeaway-banner h2 {
+            font-size: 2rem;
+            font-family: 'Potta One', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .takeaway-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .banner-image {
+            font-size: 2em;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .cta-btn {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .primary-btn {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background-color: #e65c4f;
+        }
+
+        .secondary-btn {
+            background-color: #fff;
+            color: #ff6f61;
+            border: 2px solid #ff6f61;
+        }
+
+        .secondary-btn:hover {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        .banner-image img {
+            width: 350px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-image {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .header-image img {
+                width: 250px;
+            }
+
+            .takeaway-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .banner-image img {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR (Login/Register) -->
+    <div class="nav-bar">
+        <a href="/register">Register</a>
+        <a href="/login" class="login">Log In</a>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-text">
+            <div class="title">
+                <h1>Sizzy</h1>
+                <p>You Had Me at First Bite</p>
+            </div>
+            <div class="header-image">
+                <img src="https://tinyurl.com/sizzypinup" alt="Pin Up Image">
+            </div>
+        </div>
+    </header>
+
+    <!-- TAKEAWAY BANNER -->
+    <section class="takeaway-banner">
+        <div class="banner-content">
+            <h2>Craving on the Go? Order Now and Sizzle Your Way!</h2>
+            <p>Sizzy is now available for takeaway. Grab your favorite burger and enjoy the flavor anywhere!</p>
+            <div class="cta-buttons">
+                <a href="/order" class="cta-btn primary-btn">Order to Go!</a>
+                <a href="/locations" class="cta-btn secondary-btn">Find Nearest Sizzy</a>
+            </div>
+        </div>
+        <div class="banner-image">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </section>
+
+</body>
+</html>
