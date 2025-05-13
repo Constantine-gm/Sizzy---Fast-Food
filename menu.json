@@ -3,10 +3,10 @@
       { "name": "Sizzy Voucher", "img": "https://tinyurl.com/vouchersizzy", "price": "20% sale", "image_url":"https://tinyurl.com/vouchersizzy", "link": "https://www.behance.net/gretamacedonio"  }
     ],
     "Veggie": [
-      {"name": "Sizzy Banner", "img": "https://tinyurl.com/sizzybanner", "price": "--", "image_url":"https://www.youtube.com/watch?v=PxLHbOXjS0o"  }
+      {"name": "Sizzy Banner", "img": "https://tinyurl.com/sizzybanner", "price": "--", "image_url":"https://tinyurl.com/sizzybanner", "link": "https://www.behance.net/gretamacedonio"}
     ],
     "Vegan": [
-      { "name": "Vegan Burger", "img": "https://via.placeholder.com/150", "price": "€7.50" }
+      { "name": "Packaging Identity", "img": "https://tinyurl.com/set-identity", "price": "€7.50", "image-url":"https://tinyurl.com/set-identity", "link": "https://www.behance.net/gretamacedonio" }
     ],
     "For Kids": [
       { "name": "Mini Burger", "img": "https://via.placeholder.com/150", "price": "€4.00" }
